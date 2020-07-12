@@ -1,0 +1,108 @@
+<table class="outer" cellspacing="0"> 
+<tr> 
+	<td id="centerCcolumn" colspan="2">
+		<table align="center" cellpadding="0" cellspacing="0"> 
+		<tr> 
+			<th><{$title}></th>
+		  </tr>
+		<tr> 
+             <td> 
+					<{if $users}>
+					<div style="width: 70%; float: left; padding: 0px 5px 10px 5px;">
+						<{if $nav}>
+							<table>
+							<tr>
+								<td align="right"><strong><{$page}>:&nbsp;<{$nav}></strong></td>
+							</tr>
+							</table>
+						<{/if}>	
+        				<{foreach item=user from=$users}>
+							<table class="profile" cellspacing="0" cellpadding="0">
+							<tr><td class="profile_spacer" colspan="3"></td></tr>
+							<tr >
+    							<td class="profile_photo" align="center" rowspan="3" width="120px">
+									<br />
+									<{$user.output[1]}>								
+								</td>
+								<td class="profile_spacer">&nbsp;</td>
+			    				<td class = "odd">
+									<table cellspacing="0">
+									<tr>
+										<td colspan="2" class = "profile_about"><br>
+										  <strong><{$name}></strong>: <{$user.output[0]}>
+										</td>
+									</tr>
+  									<tr><td colspan="2" class="profile_spacer"></td></tr>
+									<tr>
+		    						  <td class = "profile_about" width="100%">
+										  <strong><{$location}></strong>: <{$user.output[2]}><br />
+										  <strong><{$active}></strong>:&nbsp;<{$user.output[3]}></td>
+									    <td class = "profile_about" align="right">&nbsp;</td>
+									</tr>
+									<tr>
+										<td colspan="2" class = "profile_about">
+											<{if $user.output[4]}>
+												<br /><{$user.output[4]}><br />
+											<{else}>
+												<br />
+											<{/if}>	
+											<br />										
+										</td>
+									</tr>
+									</table>								
+								</td>
+							</tr>
+							<tr><td class="profile_spacer" colspan="3"></td></tr>
+							<tr>
+								<td class = "profile_spacer"></td>
+								<td >
+									<table cellspacing="1"><tr>
+    									<td align="left">
+											<input type="button" value="<{$button1}>" onclick="location='<{$user.output[5]}>'" />
+										</td>
+										<td align="left">
+											<input type="button" value="<{$button2}>" onclick="location='<{$user.output[6]}>'" />
+										</td>
+										<td align="left">
+											<input type="button" value="<{$button3}>" onclick="location='<{$user.output[7]}>'" />
+										</td>
+									</tr></table>								
+								</td>
+							</tr>
+							</table>
+							<br>
+        				<{/foreach}>
+    					<{if $nav}>
+							<table>
+							<tr>
+								<td align="right" colspan="2"><strong><{$page}>:&nbsp;<{$nav}></strong></td>
+							</tr>
+							</table>
+						<{/if}>
+					<{else}>
+						<table class="profile_near" cellspacing="0" cellpadding="0">
+						<tr>
+							<td class="profile_photo" align="center">
+	        				<strong>
+								<{if $message}>
+									<{$message}>
+								<{else}>
+        							<{$smarty.const._PROFILE_MA_NOUSERSFOUND}>
+								<{/if}>							
+							</strong>							
+							</td>
+							<td class="profile_photoright">&nbsp;&nbsp;</td>
+						</tr>
+						</table>
+					</div>
+					<{/if}>					
+					</td>
+		</tr>
+		<tr>
+			<td align="center"><a href="http://www.mylatinsoulmate.com" target="_blank"><br />
+		    MyLatinSoulmate Friends version 0.1 </a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>

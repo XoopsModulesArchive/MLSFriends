@@ -1,0 +1,102 @@
+<table class="outer" cellspacing="0" cellpadding="0">
+	<{if $block[0].fuid}> 
+		<tr >
+			<td class="profile_photosq" align="center" width="120px">
+				<br />
+				<{$block[0].avatar}>
+			</td>
+			<td class="profile_spacer">&nbsp;</td>
+			<td class = "profile_about">
+			<table cellspacing="0">
+				<tr>
+					<td colspan="2" class = "head"><{$block[0].realname}></td>
+				</tr>
+  				<tr><td colspan="2" class="profile_spacer"></td></tr>
+				<tr>
+			   		<td nowrap="nowrap" class = "odd"><strong><{$block[99].location}></strong>: <{$block[0].location}></td>
+				    
+				</tr>
+				<tr>
+			   		<td nowrap="nowrap" class = "odd"><strong><{$block[99].active}></strong>: <{$block[0].active}></td>
+			    </tr>
+				<tr>
+					<td colspan="2" align="left">
+						<br />
+					 	<input type="button" value="<{$block[99].delete}>" onclick="location='<{$block[0].delete}>'" />
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<{if $block[1].fuid}> 
+			<tr >
+			<td class="profile_photosq" align="center" width="120px">
+				<br />
+				<{$block[0].avatar}>
+			</td>
+			<td class="profile_spacer">&nbsp;</td>
+			<td class = "profile_about">
+			<table cellspacing="0">
+				<tr>
+					<td colspan="2" class = "head"><{$block[1].realname}></td>
+				</tr>
+  				<tr><td colspan="2" class="profile_spacer"></td></tr>
+				<tr>
+			   		<td nowrap="nowrap" class = "odd"><strong><{$block[99].location}></strong>: <{$block[1].location}></td>
+				    
+				</tr>
+				<tr>
+			   		<td nowrap="nowrap" class = "odd"><strong><{$block[99].active}></strong>: <{$block[1].active}></td>
+			    </tr>
+				<tr>
+					<td colspan="2" align="left">
+						<br />
+					 	<input type="button" value="<{$block[99].delete}>" onclick="location='<{$block[1].delete}>'" />
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<{/if}>
+		<{if $block[2].fuid}> 
+			<tr >
+			<td class="profile_photosq" align="center" width="120px">
+				<br />
+				<{$block[0].avatar}>
+			</td>
+			<td class="profile_spacer">&nbsp;</td>
+			<td class = "profile_about">
+			<table cellspacing="0">
+				<tr>
+					<td colspan="2" class = "head"><{$block[2].realname}></td>
+				</tr>
+  				<tr><td colspan="2" class="profile_spacer"></td></tr>
+				<tr>
+			   		<td nowrap="nowrap" class = "odd"><strong><{$block[99].location}></strong>: <{$block[2].location}></td>
+				    
+				</tr>
+				<tr>
+			   		<td nowrap="nowrap" class = "odd"><strong><{$block[99].active}></strong>: <{$block[2].active}></td>
+			    </tr>
+				<tr>
+					<td colspan="2" align="left">
+						<br />
+					 	<input type="button" value="<{$block[99].delete}>" onclick="location='<{$block[2].delete}>'" />
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<{/if}>
+	<{else}>
+		<tr>
+		<td class="profile_photo" align="center">
+	        <strong><{$block[99].message}></strong>
+		</td>
+		<td class="profile_photoright">&nbsp;&nbsp;</td>
+		</tr>
+	<{/if}>
+	<tr><td colspan="3" align="center"><{$block[99].link}></td></tr>
+</table>
+		
